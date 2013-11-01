@@ -4,4 +4,5 @@ module.exports = (grunt) ->
     'build'
     'karma'
     'coffeelint'
+    'coveralls'
   ]
