@@ -1,2 +1,8 @@
+
 test "simple test", ->
-    ok(something() == 100, "something didn't return 100")
+  Ember.run App, "advanceReadiness"
+
+  visit("/").then ->
+    message = find("#message").text()
+    ok("Hello World" == message, "Message was incorrect")
+
