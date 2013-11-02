@@ -1,3 +1,7 @@
 
-test "First Test", ->
-    ok(something() == 100, "something did not return 100")
+test "shows welcome message", ->
+  Ember.run App, 'advanceReadiness'
+
+  visit('/').then ->
+    message = find('#message').text()
+    ok("Hello World" == message, "Message was wrong!")
